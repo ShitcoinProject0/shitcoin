@@ -75,8 +75,9 @@ App = {
     tokenPrice: 0,
     tokensSold: 0,
     tokensToSell: 1,
-    tokensMax: 1000,
-    chainCorrect: 97,
+    tokensMax: 100000000,
+    chainCorrect: 56,
+    status: false,
 
     init: function(){
         //console.log("App initialized...");
@@ -109,7 +110,7 @@ App = {
     },
 
     linkMetamask: async function(){
-        ethereum.request({method: 'wallet_addEthereumChain', params:BSC_TESTNET_PARAM}).catch();
+        ethereum.request({method: 'wallet_addEthereumChain', params:BSC_MAINNET_PARAM}).catch();
         var checkLink = window.setInterval(checkLinkStatus, 1000);
     },
 
@@ -164,12 +165,53 @@ App = {
         var userBalance = $('#userBalance'); //User Balance interface
         var link = $('#link'); //Link Wallet interface
         var setup = $('#setup'); //All interface
+        var preSetup = $('#preSetup'); //All interface
         var loading = $('#loading'); //Loading interface
         var reminder = $('#saleRemind'); //Reminder interface
 
+        preSetup.hide();
         setup.hide();
         loading.show();
 
+        if(!App.status){
+        loading.hide();
+        preSetup.show();
+
+        var countDownDate = new Date("November 18, 2021 00:00:00").getTime();
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+          
+            var distance = countDownDate - now;
+          
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+            document.getElementById("remaining-time").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+          
+            if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("remaining-time").innerHTML = "EXPIRED";
+            }
+
+            var progressPercent = (1250) * (now/countDownDate) - (1249); //(5000/3) * (now/countDownDate) - (4997/3);
+            $('.time-percentage').html((progressPercent * 100).toFixed(2));
+
+            var progressPx;
+            if(window.innerWidth > 767){
+                progressPx = 450 * (1 - progressPercent);
+            }else if(window.innerWidth <= 767 && window.innerWidth > 450){
+                progressPx = 335 * (1 - progressPercent);
+            }else{
+                progressPx = 220 * (1 - progressPercent);
+            }
+            document.documentElement.style.setProperty('--progressLevel', progressPx + "px");
+          }, 1000);
+
+        }else{
         App.account = await ethereum.request({ method: 'eth_accounts' });
         if(App.account[0]!=undefined){ //Not connected to Metamask
             //console.log("Connected");
@@ -276,7 +318,8 @@ App = {
             App.loading = false;
             loading.hide();
             setup.show();
-        }   
+        }
+        }
     },
 
     buyTokens: async function(){
