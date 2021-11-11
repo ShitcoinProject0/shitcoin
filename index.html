@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Shitcoin</title>
+
+    <link href="/css/styles.css" rel="preload" as="style">
+    <link href="/js/scripts.js" rel="preload" as="script">
+
+    <script>
+        const PAGE_STATE = ''
+        const API_PATH = ''
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="/js-demo/lib/web3.min.js"></script>
+    <script src="/js-demo/lib/bignumber.min.js"></script>
+    <script src="/js-demo/lib/bootstrap.min.js"></script>
+    <script src="/js-demo/lib/truffle-contract.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!--Change this-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The first shitcoin that is actually no shit.">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:locale" content="en_EN">
+    <meta property="og:site_name" content="Shitcoin">
+    <meta property="og:url" content="https://shitcoinproject.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shitcoin">
+    <meta property="og:description" content="The first shitcoin that is actually no shit.">    
+
+    <link href="/css/styles.css" rel="stylesheet">
+    <script defer src="/js/scripts.js"></script>    
+
+    <link href="/fonts/commissioner-v3-latin-regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+    <link href="/fonts/raleway-v19-latin-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header id=header class="header">
+
+    <div class="header__logo" style="visibility: hidden;">
+
+        <a href="/" title="Shitcoin">
+
+            <img src="/img/logo.png" alt="Shitcoin" loading="lazy" width="132" height="119">
+
+        </a>
+
+    </div>
+
+    <div class="header__menu" class="notranslate" translate="no">
+
+        		<nav class="menu">
+
+			<ul class="menu__list">
+
+				<li class="menu__item">
+
+					<a class="menu__link" href="/#sale">Pre Sale</a>
+
+				</li>
+
+				<li class="menu__item">
+
+					<a class="menu__link" href="/#about">About</a>
+
+				</li>
+
+				<li class="menu__item">
+
+                    <a class="menu__link" href="/#tokenomics">Tokenomics</a>
+
+				</li>
+
+				<li class="menu__item">
+
+					<a class="menu__link" href="/#road-map">Road Map</a>
+
+				</li>
+
+				<li class="menu__item">
+
+					<a class="menu__link" href="/#faq">FAQ</a>
+
+				</li>
+
+			</ul>
+
+		</nav>
+
+    </div>
+
+    <div class="header__btn">
+        <a href="/#sale">
+        <button type="button" class="btn btn--outline" data-modal="select-wallet">
+            <svg width="20" height="20" viewBox="1 0 20 24">
+                <path
+                d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
+            </svg>
+            BUY NOW
+        </button>
+        </a>
+    </div>
+
+    <div class="footer__btn">
+        <a href="https://t.co/TgtvLO0jGl?amp=1" target="_blank">
+        <button type="button" class="btn btn--outline--telegram" data-modal="select-wallet">
+            <svg width="50" height="50" viewBox="0 0 30 30">
+                <path
+                d="M15 27.5a12.5 12.5 0 110-25 12.5 12.5 0 010 25zm-3.89-11.04h.02l1.09 3.58c.14.39.33.46.56.43.24-.03.36-.16.52-.3l1.48-1.44 3.19 2.36c.58.32 1 .15 1.14-.54l2.07-9.78c.23-.91-.17-1.28-.87-.98l-12.17 4.7c-.83.33-.82.8-.15 1l3.12.97z"/>
+            </svg>
+        </button>
+        </a>
+    </div>
+
+    <div class="header__btn-menu visible-md">
+
+        <button class="button btn-menu-toggle" type="button" aria-label="Menu">
+            <span class="btn-menu-toggle__top"></span>
+            <span class="btn-menu-toggle__center"></span>
+            <span class="btn-menu-toggle__bottom"></span>
+        </button>
+
+    </div>
+
+</header>
+        <main class="main">
+
+<article class="cloud-space" class="notranslate" translate="no">
+    
+    <div class="center">
+        <div class="cloud-space__content">
+            <h1 class="h1">
+                Shitcoin
+            </h1>
+            <p>
+                The first shitcoin that is actually not shit
+            </p>
+        </div>
+    </div>
+</article>
+<article class="decentralized" id="sale">
+    <div class="container center">
+        <div class="row">
+            <div>
+                <h1 class="center h2 animated" class="notranslate" translate="no">Shitcoin ICO Pre-Sale</h1>
+                <br/>
+            </div>
+        <div id="setup" style="display: none;">
+            <p class="how-works__intro animated" id="saleInt">Introducing "Shitcoin" ($SHIT)!
+                Actual token price is <span class="token-price"></span> BNB. </br>
+                Investor Hard Cap: <span class="token-hardcap"></span> SHIT - <span class="bnb-hardcap"></span> BNB, <span class="percentage-hardcap"></span>% of total.
+            </p>
+            <p class="animated" id="saleRemind">
+                (Connect your MetaMask to see the Pre-Sale progress and actual price)
+            </p>
+            <br/>
+            <div class="progress center animated">
+                <div class="progress-bar"></div>
+                <div class="progress-bar2"></div>
+            </div>
+            <p class="animated"><span class="tokens-sold-percentage"></span> % completed - <span class="tokens-sold"></span> / <span class="tokens-available"></span> tokens sold</p>
+            <br>
+            <div id="loader">
+                <button type=submit class="btn btn--small btn--sale btnWallet animated" onclick="App.initMetamask(); return false">Connect Wallet</button>
+            </div>
+            <div id="link" style="display: none;">
+                <p class="animated">You are currently connected to <span id="chain-connected"></span></p>
+                <button type=submit class="btn btn--small btn--sale btnWallet animated" onclick="App.linkMetamask(); return false">Link Wallet to BSC</button>
+            </div>
+            <div id="add" style="display: none;">
+                <button type=submit class="btn btn--small btn--sale btnWallet animated" onclick="App.addToken(); return false">Add Token to Metamask</button>
+            </div>
+            <div id="content" class="center" style="display: none">
+                <form onSubmit="App.buyTokens(); return false" role="form" class="animated">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id="numberOfTokens" class="form-control input-lg" type="number" name="number" value="1" min="1" pattern="[0-9]"></input>
+                            <span>
+                                <button type=submit class="btn" onclick="App.buyTokens(); return false">Buy Tokens</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="userAddress" style="display: none;">
+                <br/>
+                <hr class="animated">
+                <p id="accountAddress" class="animated"></p>
+            </div>
+            <p class="animated" id="userBalance" style="display: none;">Your Balance: <span class="token-balance"></span> SHIT</p>
+        </div>
+        <div id="preSetup" style="display: none;">
+            <p class="how-works__intro animated">Remaining time: <span id="remaining-time"></span>
+            </p>
+            <br/>
+            <div class="progress center animated">
+                <div class="progress-bar"></div>
+                <div class="progress-bar2"></div>
+            </div>
+            <p class="animated"><span class="time-percentage"></span> % completed</p>
+            <br>
+            <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NzJqam91M2lpbG9ib3ZzNGs4YzR0aHU3anIgc2hpdGNvaW5wcm9qZWN0MEBt&amp;tmsrc=shitcoinproject0%40gmail.com"><button type=submit class="btn btn--small btn--sale btnWallet animated" href>Add Reminder</button></a>
+        </div>
+        <div id="noSetup" style="display: none;">
+            <p class="how-works__intro animated">The Pre-Sale has already started! To participate, open this page through Google Chrome with MetaMask extension installed.</p>
+            <br/>
+        </div>
+        <p class="animated" id="loading">Loading...</p>
+        </div>
+    </div>
+</article>
+<article class="about" id="about">
+
+    <div class="center">
+        <h1 class="about__title h2 animated">
+            What is Shitcoin?
+        </h1>
+
+        <p class="about__intro animated">
+            Is there any multi-blockchain cryptocurrency that has its own NFT public marketplace, designed for DeFi, with a Staking and Yield Farming platforms, all in the same token? Yes, there is! That's Shitcoin! </br> Shitcoin is a brand new multipurpose cryptocurrency focused on being on everyone's life. </br> We aim to cover the market with the most complete, diversified and highly scalable cryptocurrency ever.
+        </p>
+
+        <div class="about__box about__box--reverse">
+
+            <div class="about__list animated left">
+
+                <h2 class="h3">
+                    NFT Marketplace
+                </h2>
+
+                <ul>
+                    <li>
+                        Publish and sell your own Non-Fungible Tokens (NFTs)
+                    </li>
+                    <li>
+                        NFTs community auctions
+                    </li>
+                    <li>
+                        Shitcoin Official NFTs
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="about__list animated right">
+
+                <h2 class="h3">
+                    Multi-Blockchain
+                </h2>
+
+                <ul>
+                    <li>
+                        Binance Smart Chain, Ethereum, Polkadot and Cardano Blockchains
+                    </li>
+                    <li>
+                        Constantly, more blockchain will be integrated in the future
+                    </li>
+                    <li>
+                        Take advantage of the best features of each network
+                    </li>
+                    <li>
+                        Swap your Shitcoins into many different blockchains with a peer-to-peer relationship
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="about__box">
+
+            <div class="about__list animated right">
+
+                <h2 class="h3" class="notranslate" translate="no">
+                    Yield Farming Platform
+                </h2>
+
+                <ul>
+                    <li>
+                        Add liquidity from your Shitcoins and earn rewards
+                    </li>
+                    <li>
+                        Variety of pairs
+                    </li>
+                    <li>
+                        Variety of supported blockchains
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="about__list animated left">
+
+                <h2 class="h3">
+                    Designed for DeFi - Staking
+                </h2>
+
+                <ul>
+                    <li>
+                        Fixed Maximum Supply
+                    </li>
+                    <li>
+                        Staking Platform - Grow your Shitcoins by locking them into different staking pools
+                    </li>
+                    <li>
+                        Transparent and immutable
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</article>
+<article class="how-works" id="tokenomics" class="notranslate" translate="no">
+
+    <div class="center">
+
+        <h1 class="how-works__title h2 animated">
+            Tokenomics
+        </h1>
+
+        <p class="how-works__intro animated">
+            Fixed Max Supply: 1.000.000.000 SHIT on each Blockchain. </br> No Decimals 
+        </p>
+
+        <div class="how-works__box">
+
+            <div class="how-works__img animated right">
+                
+                <div id="anychart-embed-samples-bct-doughnut-chart-01" class="anychart-embed anychart-embed-samples-bct-doughnut-chart-01" alt="" loading="lazy">
+                    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+                    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+                    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+                    <div id="ac_style_samples-bct-doughnut-chart-01" style="display:none;">
+                    html, body, #container {
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    </div>
+                    <script>(function(){
+                    function ac_add_to_head(el){
+                        var head = document.getElementsByTagName('head')[0];
+                        head.insertBefore(el,head.firstChild);
+                    }
+                    function ac_add_link(url){
+                        var el = document.createElement('link');
+                        el.rel='stylesheet';el.type='text/css';el.media='all';el.href=url;
+                        ac_add_to_head(el);
+                    }
+                    function ac_add_style(css){
+                        var ac_style = document.createElement('style');
+                        if (ac_style.styleSheet) ac_style.styleSheet.cssText = css;
+                        else ac_style.appendChild(document.createTextNode(css));
+                        ac_add_to_head(ac_style);
+                    }
+                    ac_add_link('https://cdn.anychart.com/releases/8.9.0/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4');
+                    ac_add_style(document.getElementById("ac_style_samples-bct-doughnut-chart-01").innerHTML);
+                    ac_add_style(".anychart-embed-samples-bct-doughnut-chart-01{width:600px;height:450px;}");
+                    })();</script>
+                    <div id="container"></div>
+                    <script>
+                    anychart.onDocumentReady(function () {
+                    
+                        // create data
+                        var data = [
+                          {x: "Pre Sale", value: 100000000},
+                          {x: "Public Sale", value: 200000000},
+                          {x: "PancakeSwap", value: 500000000},
+                          {x: "AirDrop", value: 50000000},
+                          {x: "Marketing", value: 50000000},
+                          {x: "Team", value: 100000000}
+                        ];
+                    
+                        // create a pie chart and set the data
+                        var chart = anychart.pie(data);
+                    
+                        /* set the inner radius
+                        (to turn the pie chart into a doughnut chart)*/
+                        chart.innerRadius("30%");
+                    
+                        // set the chart title
+                        chart.title("Token Distribution");
+                    
+                        // set the container id
+                        chart.container("container");
+                    
+                        // initiate drawing the chart
+                        chart.draw();
+                    });
+                    </script>
+                    </div>
+
+            </div>
+
+            <div class="how-works__text animated left">
+                <p>
+                    100% <b>Total Fixed Supply</b> = 1.000.000.000<br>
+                    5% <b>AirDrop</b> = 50.000.000<br>
+                    5% <b>Marketing</b> = 50.000.000<br>
+                    10% <b>Team</b> = 100.000.000<br>
+                    10% <b>Pre Sale</b> = 100.000.000 at 0.00001 BNB per SHIT (70% OFF)<br>
+                    20% <b>Public Sale</b> = 200.000.000: <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;5% Stage 1 = 50.000.000 at 0.00002 BNB BNB per SHIT (40% OFF)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;5% Stage 2 = 50.000.000 at 0.000025 BNB per SHIT (25% OFF)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;10% Stage 3 = 100.000.000 at 0.00003 BNB per SHIT (Fixed Price)<br>
+                    50% <b>PancakeSwap</b> = 500.000.000 - Listing price: 0.00003 BNB per SHIT<br>
+                </p>
+                <p>
+                    
+                </p>
+                <p>
+                    
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</article>
+
+<article class="road-map" id="road-map" class="notranslate" translate="no">
+
+    <div class="center">
+
+        <h2 class="road-map__title h2 animated">
+            Road Map
+        </h2>
+
+        <p class="road-map__intro animated">
+            This represents the minimum objectives to be achieved. <br> New goals can be added at anytime.
+        </p>
+
+        <div class="road-map__box">
+
+            <div class="road-map__row">
+
+                <div class="road-map__head left-side-gradient animated right">
+                    <h3>Q3 2021</h3>
+                </div>
+
+                <div class="road-map__list animated left">
+                    <ol>
+                        <li>
+                            Research
+                        </li>
+                        <li>
+                            Team Convocation
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="road-map__row road-map__row--reverse">
+
+                <div class="road-map__head right-side-gradient animated left">
+                    <h3>Q4 2021</h3>
+                </div>
+
+                <div class="road-map__list animated right">
+                    <ol>
+                        <li>
+                            Smart Contracts
+                        </li>
+                        <li>
+                            Website Launch
+                        </li>
+                        <li>
+                            Telegram Community
+                        </li>
+                        <li>
+                            Social Medias
+                        </li>
+                        <li>
+                            Binance Smart Chain
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="road-map__row">
+
+                <div class="road-map__head left-side-gradient animated right">
+                    <h3>Q1 2022</h3>
+                </div>
+
+                <div class="road-map__list animated left">
+                    <ol>
+                        <li>
+                            Airdrop
+                        </li>
+                        <li>
+                            Pre Sale
+                        </li>
+                        <li>
+                            Public Sale
+                        </li>
+                        <li>
+                            PancakeSwap
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="road-map__row road-map__row--reverse">
+
+                <div class="road-map__head right-side-gradient animated left">
+                    <h3>Q2 2022</h3>
+                </div>
+
+                <div class="road-map__list animated right">
+                    <ol>
+                        <li>
+                            Airdrop Distribution
+                        </li>
+                        <li>
+                            Ethereum Blockchain
+                        </li>
+                        <li>
+                            Uniswap
+                        </li>
+                        <li>
+                            Staking Platform
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="road-map__row">
+
+                <div class="road-map__head left-side-gradient animated right">
+                    <h3>Q3 2022</h3>
+                </div>
+
+                <div class="road-map__list animated left">
+                    <ol>
+                        <li>
+                            NFT Platform
+                        </li>
+                        <li>
+                            Polkadot Blockchain
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="road-map__row road-map__row--reverse">
+
+                <div class="road-map__head right-side-gradient animated left">
+                    <h3>Q4 2022</h3>
+                </div>
+
+                <div class="road-map__list animated right">
+                    <ol>
+                        <li>
+                            Yield Farming Platform
+                        </li>
+                        <li>
+                            Cardano Blockchain
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</article>
+
+<article class="backed-by" id="partners">
+    <div class="center">
+        <h2 class="h2 animated">
+            Partners
+        </h2>
+        <div class="backed-by__logo">
+            <a href="https://metamask.io/" target="_blank" rel="noopener" class="animated">
+                <img src="/img/partners/metamask.svg" width="188" height="134" loading="lazy" alt="Metamask" title="Metamask">
+            </a>
+            <a href="https://www.binance.com/" target="_blank" rel="noopener" class="animated">
+                <img src="/img/partners/binance-smart-chain.svg" width="195" height="90" loading="lazy" alt="Binance Smart Chain" title="Binance Smart Chain">
+            </a>
+            <a href="https://pancakeswap.finance/" target="_blank" rel="noopener" class="animated">
+                <img src="/img/partners/pancakeswap.svg" width="120" height="92" loading="lazy" alt="PancakeSwap" title="PancakeSwap">
+            </a>
+            <a href="https://ethereum.org/" target="_blank" rel="noopener" class="animated">
+                <img src="/img/partners/ethereum.svg" width="235" height="86" loading="lazy" alt="Ethereum" title="Ethereum">
+            </a>
+            <a href="https://uniswap.org/" target="_blank" rel="noopener" class="animated">
+                <img src="/img/partners/uniswap.svg" width="165" height="82" loading="lazy" alt="Uniswap" title="Uniswap">
+            </a>
+        </div>
+    </div>
+</article>
+
+<article class="cases" id="faq">
+
+    <div class="center">
+
+        <h2 class="why__title h2 animated">
+            Frequently Asked Questions
+        </h2>
+
+        <div class="freqask">
+            <details class="animated">
+                <summary>
+                    <span class="summary-title">What will be done with the ICO's funds?</span>
+                    <div class="summary-chevron-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </summary>
+            
+                <div class="summary-content">It will be invested mainly in marketing. We want Shitcoin to be on everyone's lips. We will work with crypto influencers and related media, as well as investing in all the necessary infrastructure to carry out the project.</div>
+                <div class="summary-chevron-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+            </details>
+
+            <details class="animated">
+                <summary>
+                    <span class="summary-title">Will Shitcoin integrate more Blockchains in the future?</span>
+                    <div class="summary-chevron-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </summary>
+            
+                <div class="summary-content">Yes! Definitely. Our idea is to reach out and connect as many blockchains as possible, to take advantage of all the best features that each one offers.</div>
+                <div class="summary-chevron-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+            </details>
+            
+            <details class="animated">
+                <summary>
+                    <span class="summary-title">Will more things be done apart from what is indicated in the Roadmap?</span>
+                    <div class="summary-chevron-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </summary>
+            
+                <div class="summary-content">Undoubtedly! The Roadmap represents the MINIMUM objectives to be met. From now on, new ideas and improvements will be added to make Shitcoin bigger and bigger every day.</div>
+                <div class="summary-chevron-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+            </details>
+
+        </div> 
+
+    </div>
+
+</article>
+
+        </main>
+
+        	<footer class="footer">
+
+		<div class="center">
+
+			<div class="footer__box">
+
+				<div class="footer__left">
+                    
+                    <a href="/#" title="Shitcoin">
+					<img class="footer__logo" src="/img/logo.png" alt="Shitcoin" loading="lazy" width="165" height="149">
+                    </a>
+
+					<p class="copyright">
+						Shitcoin © 2020 - 2021. All Rights Reserved.
+					</p>
+
+				</div>
+
+				<div class="footer__center">
+
+					<ul class="footer__menu" class="notranslate" translate="no">
+
+						<li>
+							<a href="/#sale">Pre Sale</a>
+						</li>
+
+						<li>
+							<a href="/#road-map">Road Map</a>
+						</li>
+
+						<li>
+							<a href="/#about">About</a>
+						</li>
+
+						<li>
+							<a href="/#tokenomics">Tokenomics</a>
+						</li>
+
+						<li>
+							<a href="/#partners">Partners</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="footer__right">
+
+					<p class="footer__right-head">
+						Social:
+					</p>
+
+
+			<ul class="social">
+			
+				<li class="social__item">
+
+					<a class="social__link" href="https://t.co/TgtvLO0jGl?amp=1" title="Telegram" target="_blank" rel="noopener">
+						<svg width="30" height="30" viewBox="0 0 30 30"><path d="M15 27.5a12.5 12.5 0 110-25 12.5 12.5 0 010 25zm-3.89-11.04h.02l1.09 3.58c.14.39.33.46.56.43.24-.03.36-.16.52-.3l1.48-1.44 3.19 2.36c.58.32 1 .15 1.14-.54l2.07-9.78c.23-.91-.17-1.28-.87-.98l-12.17 4.7c-.83.33-.82.8-.15 1l3.12.97z"/></svg>
+					</a>
+
+				</li>
+
+				<li class="social__item">
+
+					<a class="social__link" href="https://twitter.com/ShitcoinOfficia" title="Twitter" target="_blank" rel="noopener">
+						<svg width="30" height="30" viewBox="0 0 30 30"><path d="M27.7 7.07c-.95.42-1.96.7-3 .82A5.25 5.25 0 0027 5a10.45 10.45 0 01-3.32 1.27 5.23 5.23 0 00-8.9 4.77A14.84 14.84 0 014 5.57a5.21 5.21 0 001.62 6.98 5.21 5.21 0 01-2.37-.65v.06a5.23 5.23 0 004.2 5.13c-.78.21-1.59.24-2.37.1a5.23 5.23 0 004.88 3.62 10.5 10.5 0 01-7.74 2.17 14.79 14.79 0 008.02 2.35c9.61 0 14.87-7.97 14.87-14.88 0-.22 0-.45-.02-.67 1.03-.74 1.91-1.66 2.61-2.7v-.01z"/></svg>
+					</a>
+
+				</li>
+
+                <li class="social__item">
+
+					<a class="social__link" href="https://medium.com/@shitcoinproject" title="Medium" target="_blank" rel="noopener">
+						<svg width="30" height="30" viewBox="0 0 30 30"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 27.5a12.5 12.5 0 100-25 12.5 12.5 0 000 25zm-3.9-7.72a5.05 5.05 0 005.04-5.07c0-2.8-2.25-5.07-5.03-5.07a5.05 5.05 0 00-5.04 5.07c0 2.8 2.26 5.07 5.04 5.07zm8.05-.3c1.4 0 2.52-2.13 2.52-4.77 0-2.63-1.13-4.77-2.52-4.77-1.39 0-2.52 2.14-2.52 4.77 0 2.64 1.13 4.78 2.52 4.78zm4.78-4.77c0 2.36-.4 4.28-.89 4.28s-.88-1.91-.88-4.28c0-2.36.4-4.27.88-4.27.5 0 .89 1.91.89 4.27z"/></svg>
+					</a>
+
+				</li>
+
+			</ul>
+
+            <p class="footer__right-head">
+                Useful Links:
+            </p>
+
+            <ul class="social">
+			
+				<li class="social__item">
+
+					<a class="social__link" href="https://coinmarketcap.com/" title="CoinMarketCap" target="_blank" rel="noopener">
+						<svg viewBox="0 0 76.52 77.67" xmlns="http://www.w3.org/2000/svg"><path d="m66.54 46.41a4.09 4.09 0 0 1 -4.17.28c-1.54-.87-2.37-2.91-2.37-5.69v-8.52c0-4.09-1.62-7-4.33-7.79-4.58-1.34-8 4.27-9.32 6.38l-8.1 13.11v-16c-.09-3.69-1.29-5.9-3.56-6.56-1.5-.44-3.75-.26-5.94 3.08l-18.11 29.07a32 32 0 0 1 -3.64-14.94c0-17.52 14-31.77 31.25-31.77s31.3 14.25 31.3 31.77v.09s0 .06 0 .09c.17 3.39-.93 6.09-3 7.4zm10-7.57v-.17c-.14-21.35-17.26-38.67-38.29-38.67s-38.25 17.42-38.25 38.83 17.16 38.84 38.25 38.84a37.81 37.81 0 0 0 26-10.36 3.56 3.56 0 0 0 .18-5 3.43 3.43 0 0 0 -4.86-.23 30.93 30.93 0 0 1 -44.57-2.08l16.3-26.2v12.09c0 5.81 2.25 7.69 4.14 8.24s4.78.17 7.81-4.75l9-14.57c.28-.47.55-.87.79-1.22v7.41c0 5.43 2.18 9.77 6 11.91a11 11 0 0 0 11.21-.45c4.2-2.73 6.49-7.67 6.25-13.62z" fill="000"/></svg>
+					</a>
+
+				</li>
+
+				<li class="social__item">
+
+					<a class="social__link" href="https://www.coingecko.com/" title="CoinGecko" target="_blank" rel="noopener">
+						<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276 276"><defs><style>.cls-1{fill:#fff;}.cls-3{fill:#fff;}.cls-4{fill:#fff;}.cls-5{fill:#fff;}</style></defs><title>CoinGecko</title><g id="Coin_Gecko_AI" data-name="Coin Gecko AI"><path class="cls-1" d="M276,137.39A138,138,0,1,1,137.39,0h0A138,138,0,0,1,276,137.39Z" transform="translate(0 0)"/><path class="cls-2" d="M265.65,137.44a127.63,127.63,0,1,1-128.21-127h0A127.65,127.65,0,0,1,265.65,137.44Z" transform="translate(0 0)"/><path class="cls-3" d="M140.35,18.66a70.18,70.18,0,0,1,24.53,0,74.75,74.75,0,0,1,23.43,7.85c7.28,4,13.57,9.43,19.83,14.52s12.49,10.3,18.42,16a93.32,93.32,0,0,1,15.71,19,108.28,108.28,0,0,1,11,22.17c5.33,15.66,7.18,32.53,4.52,48.62H257c-2.67-15.95-6.29-31.15-12-45.61A177.51,177.51,0,0,0,235.56,80,209.1,209.1,0,0,0,223.14,60a72.31,72.31,0,0,0-16.64-16.8c-6.48-4.62-13.93-7.61-21.14-10.45S171,27,163.48,24.84s-15.16-3.78-23.14-5.35Z" transform="translate(0 0)"/><path class="cls-4" d="M202.74,92.39c-9.26-2.68-18.86-6.48-28.58-10.32-.56-2.44-2.72-5.48-7.09-9.19-6.35-5.51-18.28-5.37-28.59-2.93-11.38-2.68-22.62-3.63-33.41-1C16.82,93.26,66.86,152.57,34.46,212.19c4.61,9.78,54.3,66.84,126.2,51.53,0,0-24.59-59.09,30.9-87.45C236.57,153.18,269.09,110.46,202.74,92.39Z" transform="translate(0 0)"/><path class="cls-3" d="M213.64,131.2a5.35,5.35,0,1,1-5.38-5.32A5.36,5.36,0,0,1,213.64,131.2Z" transform="translate(0 0)"/><path class="cls-5" d="M138.48,69.91c6.43.46,29.68,8,35.68,12.12-5-14.5-21.83-16.43-35.68-12.12Z" transform="translate(0 0)"/><path class="cls-3" d="M144.6,106.58a24.68,24.68,0,1,1-24.69-24.67h0a24.68,24.68,0,0,1,24.68,24.66Z" transform="translate(0 0)"/><path class="cls-6" d="M137.28,106.8a17.36,17.36,0,1,1-17.36-17.36h0A17.36,17.36,0,0,1,137.28,106.8Z" transform="translate(0 0)"/><path class="cls-4" d="M233.63,142.08c-20,14.09-42.74,24.78-75,24.78-15.1,0-18.16-16-28.14-8.18-5.15,4.06-23.31,13.14-37.72,12.45S55,162,48.49,131.23C45.91,162,44.59,184.65,33,210.62c23,36.83,77.84,65.24,127.62,53C155.31,226.27,188,189.69,206.34,171c7-7.09,20.3-18.66,27.29-28.91Z" transform="translate(0 0)"/><path class="cls-6" d="M232.85,143c-6.21,5.66-13.6,9.85-21.12,13.55a134.9,134.9,0,0,1-23.7,8.63c-8.16,2.11-16.67,3.7-25.29,2.92s-17.43-3.71-23.14-10.17l.27-.31c7,4.54,15.08,6.14,23.12,6.37a108.27,108.27,0,0,0,24.3-2,132.71,132.71,0,0,0,23.61-7.3c7.63-3.15,15.18-6.8,21.68-12Z" transform="translate(0 0)"/></g></svg>
+					</a>
+
+				</li>
+
+			</ul>
+            
+				</div>
+
+			</div>
+
+		</div>
+
+	</footer>
+
+</body>
+
+</html>
